@@ -1,0 +1,95 @@
+SEGGER J-Link Commander V7.88a (Compiled May  3 2023 14:39:36)
+DLL version V7.88a, compiled May  3 2023 14:37:59
+
+
+J-Link Command File read successfully.
+Processing script file...
+J-Link>eoe 0
+J-Link Commander will no longer exit on Error
+J-Link>usb 0
+Connecting to J-Link via USB...O.K.
+Firmware: J-Link V9 compiled May  7 2021 16:26:12
+Hardware version: V9.50
+J-Link uptime (since boot): N/A (Not supported by this model)
+S/N: 20580006
+License(s): GDB, RDI, FlashBP, FlashDL, JFlash
+VTref=4.489V
+J-Link>si SWD
+Selecting SWD as current target interface.
+J-Link>power on
+J-Link>r
+Target connection not established yet but required for command.
+Device "CY8C4146XXX-SXXX" selected.
+
+
+Connecting to target via SWD
+InitTarget() start
+InitTarget() end - Took 1.50s
+Connect failed. Resetting via Reset pin and trying again.
+InitTarget() start
+InitTarget() end - Took 1.50s
+Cannot connect to target.
+J-Link>h
+Target connection not established yet but required for command.
+Device "CY8C4146XXX-SXXX" selected.
+
+
+Connecting to target via SWD
+InitTarget() start
+InitTarget() end - Took 6.61ms
+Found SW-DP with ID 0x0BC11477
+DPIDR: 0x0BC11477
+CoreSight SoC-400 or earlier
+Scanning AP map to find all available APs
+AP[1]: Stopped AP scan as end of AP map has been reached
+AP[0]: AHB-AP (IDR: 0x04770031)
+Iterating through AP map to find AHB-AP to use
+AP[0]: Core found
+AP[0]: AHB-AP ROM base: 0xF0000000
+CPUID register: 0x410CC601. Implementer code: 0x41 (ARM)
+Found Cortex-M0 r0p1, Little endian.
+FPUnit: 4 code (BP) slots and 0 literal slots
+CoreSight components:
+ROMTbl[0] @ F0000000
+[0][0]: E00FF000 CID B105100D PID 000BB4C0 ROM Table
+ROMTbl[1] @ E00FF000
+[1][0]: E000E000 CID B105E00D PID 000BB008 SCS
+[1][1]: E0001000 CID B105E00D PID 000BB00A DWT
+[1][2]: E0002000 CID B105E00D PID 000BB00B FPB
+Memory zones:
+  Zone: "Default" Description: Default access mode
+Cortex-M0 identified.
+PC = 10000040, CycleCnt = 00000000
+R0 = 0040C0FF, R1 = 200000F1, R2 = 40030000, R3 = 80000004
+R4 = 40110000, R5 = A0000000, R6 = 0FFFF060, R7 = 00000000
+R8 = 08010800, R9 = 00208010, R10= 04000140, R11= 00022020
+R12= 20000000
+SP(R13)= 20001FE8, MSP= 20001FE8, PSP= 01810008, R14(LR) = 10000105
+XPSR = 21000000: APSR = nzCvq, EPSR = 01000000, IPSR = 000 (NoException)
+CFBP = 00000000, CONTROL = 00, FAULTMASK = 00, BASEPRI = 00, PRIMASK = 00
+FPU regs: FPU not enabled / not implemented on connected CPU.
+J-Link>erase
+No address range specified, 'Erase Chip' will be executed
+'erase': Performing implicit reset & halt of MCU.
+ResetTarget() start
+Executing ResetTarget()
+ResetTarget() end - Took 109ms
+Erasing device...
+J-Link: Flash download: Total time needed: 0.391s (Prepare: 0.209s, Compare: 0.000s, Erase: 0.121s, Program: 0.000s, Verify: 0.000s, Restore: 0.060s)
+Erasing done.
+J-Link>loadfile "C:\batch\OV.GoodP.TB.BeastGasTimer.SP.V00.13_FTC.hex"
+'loadfile': Performing implicit reset & halt of MCU.
+ResetTarget() start
+Executing ResetTarget()
+ResetTarget() end - Took 108ms
+T-bit of XPSR is 0 but should be 1. Changed to 1.
+Downloading file [C:\batch\OV.GoodP.TB.BeastGasTimer.SP.V00.13_FTC.hex]...
+J-Link: Flash download: Bank 0 @ 0x00000000: 1 range affected (65536 bytes)
+J-Link: Flash download: Total: 3.450s (Prepare: 0.084s, Compare: 0.050s, Erase: 0.038s, Program & Verify: 3.214s, Restore: 0.062s)
+J-Link: Flash download: Program & Verify speed: 20 KB/s
+Writing target memory failed.
+J-Link>power off
+J-Link>qc
+
+Script processing completed.
+

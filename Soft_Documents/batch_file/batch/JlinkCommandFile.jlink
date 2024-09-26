@@ -1,0 +1,12 @@
+eoe 0
+usb 0
+si SWD
+power on
+r
+h
+erase
+
+loadfile "C:\batch\OV.GoodP.TB.BeastGasTimer.SP.V00.13_FTC.hex"
+
+power off
+qc
